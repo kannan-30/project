@@ -22,7 +22,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/', indexRouter);
 
-// Start the server
-app.listen(3000, () => {
-  console.log('Server started on http://localhost:3000');
-});
+// Export the app without listening
+module.exports = app;

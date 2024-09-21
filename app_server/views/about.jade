@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  header
+    h1 Restaurant Name
+    p Serving delicious Indian cuisine
+
+  // Navbar for navigating between pages
+  .navbar
+    button.nav-btn(onclick="window.location.href='/'") Home
+    button.nav-btn(onclick="window.location.href='/reservation'") Reservation
+    button.nav-btn(onclick="window.location.href='/about'") About Us
+
+  h1 About Us
+  p We are a family-owned restaurant, dedicated to providing a memorable dining experience.
+  section#reviews
+    h2 What Our Guests Are Saying
+    each review in reviews
+      .review
+        blockquote
+          p "#{review.review}"

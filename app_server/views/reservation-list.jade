@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 Reservations
+  ul
+    each reservation in reservations
+      li
+        p Name: #{reservation.name}, Date: #{reservation.date}, Time: #{reservation.time}, Guests: #{reservation.guests}

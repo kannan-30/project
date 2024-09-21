@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1 Make a Reservation
+  link(rel="stylesheet", href="/stylesheets/r.css")
+  form(action='/reservation', method='post')
+    div
+      label(for='name') Name:
+      input(type='text', id='name', name='name', required)
+    div
+      label(for='email') Email:
+      input(type='email', id='email', name='email', required)
+    div
+      label(for='phone') Phone:
+      input(type='text', id='phone', name='phone', required)
+    div
+      label(for='date') Date:
+      input(type='date', id='date', name='date', required)
+    div
+      label(for='time') Time:
+      input(type='time', id='time', name='time', required)
+    div
+      label(for='guests') Number of Guests:
+      input(type='number', id='guests', name='guests', min='1', required)
+    button(type='submit') Submit Reservation
+
+  // Optional: Add a back button if you want users to navigate easily
+  a(href='/') Back to Home

@@ -4,11 +4,12 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const indexRouter = require('./app_server/routes/index');
 
-const app = express();
+const app = express(); // Make sure this is defined
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost/restaurantDB', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB connected'))
+// Connect to MongoDB Atlas
+const mongoURI = 'mongodb+srv://kannan:ABC123@restaurantdb.pqd7a.mongodb.net/?retryWrites=true&w=majority&appName=RestaurantDB';
+mongoose.connect(mongoURI)
+  .then(() => console.log('MongoDB Atlas connected'))
   .catch(err => console.log(err));
 
 // Set view engine to Jade/Pug
@@ -22,5 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/', indexRouter);
 
-// Export the app without listening
-module.exports = app;
+// Start the server
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server started on http://localhost:${port}`);
+});

@@ -1,0 +1,62 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/m.css')
+  header
+    h1 The Desi Delight
+    p Serving delicious Indian cuisine
+
+  // Navbar for navigating between pages
+  .navbar
+    button.nav-btn(onclick="window.location.href='/'") Home
+    button.nav-btn(onclick="window.location.href='/reservation'") Reservation
+    button.nav-btn(onclick="window.location.href='/about'") About Us
+
+  main
+    section#menu
+      h1 Restaurant Menu
+
+      // Appetizers Section
+      .menu-section
+        h2 Appetizers
+        .menu-item
+          img(src='/images/samosa.jpg', alt='Samosa')
+          p Samosa - ₹50
+        .menu-item
+          img(src='/images/paneer_tikka.jpg', alt='Paneer Tikka')
+          p Paneer Tikka - ₹120
+        .menu-item
+          img(src='/images/pakora.jpg', alt='Pakora')
+          p Vegetable Pakora - ₹80
+
+      // Main Course Section
+      .menu-section
+        h2 Main Course
+        .menu-item
+          img(src='/images/butter_chicken.jpg', alt='Butter Chicken')
+          p Butter Chicken - ₹300
+        .menu-item
+          img(src='/images/biryani.jpg', alt='Biryani')
+          p Chicken Biryani - ₹250
+        .menu-item
+          img(src='/images/palak_paneer.jpg', alt='Palak Paneer')
+          p Palak Paneer - ₹220
+        .menu-item
+          img(src='/images/naan.jpg', alt='Garlic Naan')
+          p Garlic Naan - ₹40
+
+      // Desserts Section
+      .menu-section
+        h2 Desserts
+        .menu-item
+          img(src='/images/gulab_jamun.jpg', alt='Gulab Jamun')
+          p Gulab Jamun - ₹60
+        .menu-item
+          img(src='/images/kulfi.jpg', alt='Kulfi')
+          p Kulfi - ₹70
+
+    // Footer with back button
+    button.btn(onclick="window.location.href='/'") Back to Home
+
+  footer
+    p &copy; 2024 The Desi Delight. All rights reserved.

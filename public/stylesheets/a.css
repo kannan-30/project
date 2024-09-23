@@ -1,0 +1,131 @@
+/* General styles for the About page */
+body {
+  font-family: 'Open Sans', sans-serif; /* More modern, clean font */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9; /* Light background color */
+}
+
+header {
+  background: #00695c; /* Darker background for contrast */
+  padding: 40px 20px; /* More padding for spacing */
+  text-align: center;
+  color: #fff; /* White text for better readability */
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+main {
+  padding: 40px 20px; /* Increased padding for a spacious layout */
+}
+
+#reviews {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fdfdfd; /* Clean background for the review section */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.review {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #fff; /* White background for each review */
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  color: #555; /* Softer color for quotes */
+}
+
+footer {
+  background: #00695c;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+form {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease; /* Smooth transition for focus */
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff; /* Highlighted border on focus */
+}
+
+button {
+  padding: 12px 25px; /* More padding for a balanced look */
+  background: #28a745; /* Switched to a green color for a more modern look */
+  color: #fff;
+  border: none;
+  border-radius: 5px; /* Smooth, rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+button:hover {
+  background: #218838; /* Darker green on hover */
+}
+
+/* Navbar button styles */
+.nav-btn {
+  background-color: #e67e22; /* Warm orange to match the restaurant theme */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #d35400; /* Darker orange on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2em;
+  }
+
+  .navbar button {
+      display: block;
+      margin: 10px 0;
+  }
+
+  main {
+      padding: 20px;
+  }
+
+  form {
+      padding: 15px;
+  }
+}

@@ -1,0 +1,91 @@
+extends layout
+
+block content
+  title The Masala Mystique
+  link(rel='stylesheet', href='/stylesheets/m.css')
+
+  body
+    header
+      .navbar
+        img(src='/images/dish.jpg', alt='Restaurant Logo', class='logo')
+        span.restaurant-name THE MASALA MYSTIQUE
+        ul.nav-links
+          li
+            a(href='/') Home
+          li
+            a(href='/about') About
+          
+        button.btn-reserve(onclick="window.location.href='/reservation'") Reserve a Table
+
+    main
+      section#menu
+        h1 RESTAURANT MENU
+
+        // Appetizers Section
+        .menu-section
+          h2 Appetizers
+          .menu-grid
+            .menu-item
+              img(src='/images/samosa.jpg', alt='Samosa')
+              p Samosa - ₹50
+            .menu-item
+              img(src='/images/paneer_tikka.jpg', alt='Paneer Tikka')
+              p Paneer Tikka - ₹120
+            .menu-item
+              img(src='/images/pakora.jpg', alt='Pakora')
+              p Vegetable Pakora - ₹80
+            .menu-item
+              img(src='/images/spring.jpg', alt='Bhel Puri')
+              p Spring roll - ₹200
+            .menu-item
+              img(src='/images/chicken.jpg', alt='Pani Puri')
+              p Chicken 65 - ₹220
+
+        // Main Course Section
+        .menu-section
+          h2 Main Course
+          .menu-grid
+            .menu-item
+              img(src='/images/butter_chicken.jpg', alt='Butter Chicken')
+              p Butter Chicken - ₹300
+            .menu-item
+              img(src='/images/biryani.jpg', alt='Biryani')
+              p Chicken Biryani - ₹250
+            .menu-item
+              img(src='/images/palak_paneer.jpg', alt='Palak Paneer')
+              p Palak Paneer - ₹220
+            .menu-item
+              img(src='/images/naan.jpg', alt='Garlic Naan')
+              p Garlic Naan - ₹40
+            .menu-item
+              img(src='/images/dal.jpg', alt='Dal Makhani')
+              p Dal Makhani - ₹180
+            .menu-item
+              img(src='/images/ct.jpg', alt='Chicken Tikka Masala')
+              p Chicken Tikka Masala - ₹320
+            .menu-item
+              img(src='/images/pb.jpg', alt='Vegetable Biryani')
+              p paneer biryani - ₹200
+
+        // Desserts Section
+        .menu-section
+          h2 Desserts
+          .menu-grid
+            .menu-item
+              img(src='/images/gulab_jamun.jpg', alt='Gulab Jamun')
+              p Gulab Jamun - ₹60
+            .menu-item
+              img(src='/images/kulfi.jpg', alt='Kulfi')
+              p Kulfi - ₹70
+            .menu-item
+              img(src='/images/rs.jpg', alt='Rasmalai')
+              p Rasmalai - ₹130
+            .menu-item
+              img(src='/images/frs.jpg', alt='Fruit Salad')
+              p Fruit Salad - ₹150
+
+      // Footer with back button
+      button.btn(onclick="window.location.href='/'") Back to Home
+
+    footer
+      p &copy; 2024 The Masala Mystique. All rights reserved.

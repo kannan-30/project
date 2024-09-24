@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title The Masala Mystique
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    header
+      .navbar
+        img(src='/images/dish.jpg', alt='Restaurant Logo', class='logo')
+        span.restaurant-name THE MASALA MYSTIQUE
+        ul.nav-links
+          li
+            a(href='/about') About
+          li
+            a(href='/menu') Menu
+          
+        button.btn-reserve(onclick="window.location.href='/reservation'") Reserve a Table
+
+    .hero
+      img.hero-img(src='/images/intt.jpeg', alt='BBQ Restaurant')
+      .hero-content
+        h1 Welcome To The Masala Mystique
+        p Serving delicious Indian cuisine
+        button.btn(onclick="window.location.href='/reservation'") Reserve Now
+
+    footer
+      p &copy; 2024 The Masala Mystique. All rights reserved.

@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title The Masala Mystique
+    link(rel='stylesheet', href='/stylesheets/a.css')
+
+  body
+    .navbar
+      img(src='/images/dish.jpg', alt='Restaurant Logo', class='logo')
+      span.restaurant-name THE MASALA MYSTIQUE
+      .nav-links
+        ul
+          li
+            button.nav-btn(onclick="window.location.href='/'") Home
+          li
+            button.nav-btn(onclick="window.location.href='/menu'") View our menu
+      button.btn-reserve(onclick="window.location.href='/reservation'") Reserve a Table
+
+    // Main section
+    main
+      h1 About Us
+
+      // Flex container for image and content
+      .about-container
+        img.about-image(src='/images/int2.jpeg', alt='Inside the Restaurant')
+        
+        .about-content
+          p We are a family-owned restaurant, dedicated to providing a memorable dining experience. 
+            At The Masala Mystique, we serve authentic Indian cuisine made from fresh ingredients and traditional spices. 
+            Our chefs have mastered the art of blending flavors, offering a wide range of dishes, from savory street food to exquisite curries and sweets.
+
+          // History Section
+          section#history
+            h2 Our Story
+            p The Masala Mystique began as a small eatery in the heart of the city. 
+              Over the years, we’ve grown into a full-service restaurant, welcoming families and food enthusiasts from all over. Our passion for food and dedication to hospitality have earned us a reputation as a must-visit destination for Indian cuisine.
+
+          // Mission Statement
+          section#mission
+            h2 Our Mission
+            p Our mission is simple: to share the rich and diverse culinary traditions of India with the world.
+              We believe in providing high-quality food with exceptional service, in a warm and welcoming environment.
+
+          // Reviews Section
+          section#reviews
+            h2 What Our Guests Are Saying
+            each review in reviews
+              .review
+                blockquote
+                  p "#{review.review}"
+
+    footer
+      p &copy; 2024 The Masala Mystique. All rights reserved.

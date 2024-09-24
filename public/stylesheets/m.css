@@ -1,0 +1,163 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  height: 100%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #ff9800; /* Bottom border for emphasis */
+  height: 60px; /* Fixed height for navbar */
+  left: 0; /* Aligns the navbar to the left */
+}
+
+/* Remove any background color for the header */
+header {
+  background-color: transparent; /* Ensure no background color */
+}
+
+.logo {
+  height: 50px;
+}
+
+.restaurant-name {
+  font-size: 24px; /* Size of the restaurant name */
+  color: #333; /* Color of the restaurant name */
+  margin-left: 1px; /* Space between logo and name */
+  align-self: left; /* Align vertically with the logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Adjusted spacing */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 10px 15px; /* Added padding for clickable area */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #ff9800; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.btn-reserve {
+  background-color: #ff9800; /* Button color */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-reserve:hover {
+  background-color: #e68900; /* Darker shade on hover */
+}
+
+/* Main Section */
+main {
+  padding-top: 70px; /* Adjusted space for fixed navbar height */
+  max-width: 1200px;
+  margin: 20px auto; /* Center main content */
+}
+
+/* Menu Section Styling */
+#menu {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu-section {
+  margin: 40px 0;
+}
+
+.menu-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #00796b; /* Updated header color */
+  border-bottom: 2px solid #ff9800; /* Underline for sections */
+  padding-bottom: 10px;
+}
+
+.menu-grid {
+  display: grid; /* Use grid for layout */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between items */
+}
+
+.menu-item {
+  background-color: #fff; /* White background for items */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  overflow: hidden; /* Prevent overflow */
+  transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.menu-item:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.menu-item img {
+  width: 100%; /* Full width for images */
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Crop images to fit */
+}
+
+.menu-item p {
+  font-size: 1.2em; /* Adjusted font size */
+  color: #333; /* Ensure text color matches */
+  margin: 10px; /* Margin around text */
+  text-align: center; /* Centered text */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e68900;
+}
